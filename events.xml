@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+	<event>
+		<title>Charity Team Meeting</title>
+		<location>PTP02-2H9-D3, Innovation Center</location>
+		<start>02/23/2017</start>
+		<end>02/23/2017</end>
+		<month>Feb</month>
+		<day>23</day>
+		<year>2017</year>
+		<summary></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Wellness Seminar: Effects of sleep deprivation</title>
+		<location>PTP02-2H9-D3, Innovation Center</location>
+		<start>02/27/2017</start>
+		<end>02/27/2017</end>
+		<month>Feb</month>
+		<day>27</day>
+		<year>2017</year>
+		<summary><![CDATA[Informational seminar on the effects of sleep deprivation on the body.]]></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Wellness Committee Meeting</title>
+		<location>PTP01-2M39, Jackson Conference Room</location>
+		<start>03/03/2017</start>
+		<end>03/03/2017</end>
+		<month>Mar</month>
+		<day>3</day>
+		<year>2017</year>
+		<summary></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>ECS All-Hands with Brian Walters</title>
+		<location>NHQ Auditorium or Desktop Viewing</location>
+		<start>03/06/2017</start>
+		<end>03/06/2017</end>
+		<month>Mar</month>
+		<day>6</day>
+		<year>2017</year>
+		<summary><![CDATA[All-Hands meeting to discuss the our 2017 objectives and state of the business.]]></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Employee Engagement Committee Meeting</title>
+		<location>PTP01-2M33- Franconia Conference Room</location>
+		<start>03/07/2017</start>
+		<end>03/07/2017</end>
+		<month>Mar</month>
+		<day>7</day>
+		<year>2017</year>
+		<summary><![CDATA[Hudson's Employee Engagement Committee meets every first Tuesday of the month.]]></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Diversity amp; Inclusion Committee Meeting</title>
+		<location>PTP01-2M33, Franconia Conference Room</location>
+		<start>03/14/2017</start>
+		<end>03/14/2017</end>
+		<month>Mar</month>
+		<day>14</day>
+		<year>2017</year>
+		<summary><![CDATA[Hudson's D amp; I Committee meets every second Tuesday at noon.]]></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Paint After Work</title>
+		<location>South Nashua Café Function Room</location>
+		<start>03/16/2017</start>
+		<end>03/16/2017</end>
+		<month>Mar</month>
+		<day>16</day>
+		<year>2017</year>
+		<summary><![CDATA[Channel your inner artist at the Paint After Work wooden sign class]]></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Empower Expo</title>
+		<location>Innovation Center, PTP02</location>
+		<start>4/27/2017</start>
+		<end>4/27/2017</end>
+		<month>Apr</month>
+		<day>27</day>
+		<year>2017</year>
+		<summary><![CDATA[Empower Expo Summary here]]></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Operations All-Hands Meeting</title>
+		<location>NHQ auditorium or via VBrick</location>
+		<start>2/20/2017</start>
+		<end>2/20/2017</end>
+		<month>Feb</month>
+		<day>20</day>
+		<year>2017</year>
+		<summary><![CDATA[Operations All Hands Meeting broadcast live from Nashua, New Hampshire.]]></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Winter Outing Registration</title>
+		<location>Gunstock Mountain</location>
+		<start>1/20/2017</start>
+		<end>2/17/2017</end>
+		<month>Jan</month>
+		<day>20</day>
+		<year>2017</year>
+		<summary><![CDATA[Winter Outing at Gunstock! ]]></summary>
+		<img>/es/assets/template/images/defaults/event_filler.jpg</img>
+	</event>
+	
+</items>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+	<news>
+		<title>News story 1</title>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 2</title>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 3</title>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 4</title>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 5</title>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 6</title>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 7</title>
+		<summary><![CDATA[]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 8</title>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 9</title>
+		<summary><![CDATA[]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	<news>
+		<title>News story 10</title>
+		<summary><![CDATA[]]></summary>
+		<img>/es/assets/template/images/defaults/news_filler.jpg</img>
+	</news>
+	
+</items>
