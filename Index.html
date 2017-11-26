@@ -1,0 +1,1799 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="X-UA-Compatible" content="IE=11">
+  	<title>click demo</title>
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="https://use.fontawesome.com/f761096d4b.js"></script>
+    <link href="https://use.fontawesome.com/f761096d4b.css" media="all" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<!-- RUM Header -->
+<script> window["egrum-start_time"] = new Date().getTime();
+window["Site_Name"] = "40348cda-9968-471c-b49c-f53019a5519d-1510173600902";
+window["beacon-url"] = "https://GLDAS90273.goldlnk.rootlnka.net:7077";</script>
+<script src="https://GLDAS90273.goldlnk.rootlnka.net:7077/rumcollector/egrum.js">
+</script>
+<!-- RUM Header --></head>
+
+<body>
+<div style="display:block; width:100%;">
+        <div class="preview_area">
+          	<div class="widget side_200 default events" id="widget">
+                <div class="header light underline-solid" id="header">
+                    <div class="ico option1 tab-background"></div>
+                    <div class="text"><div class="title"></div></div>
+                    <div class="underline"></div>
+                </div>
+                <div class="content" id="content">
+                	<div class="content-placeholder bottom-line">
+                    	<div class="container">
+                            <div class="item events list" id="item"></div>
+						</div>
+                    </div>
+                	<div id="archive" class="archive plus theme hide"><a href="" class="archive-text"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls_area">
+        <h1>Controls</h1>
+        <hr>
+        <div style="width:10%; float:left;">
+            <table width="100%">
+                <tbody><tr>
+                    <td><strong>Themes</strong><br />
+                    <select id="theme_dropdown">
+                        <option value="default">Default</option>
+                        <option value="theme5">Black</option>
+						<option value="theme2">Teal</option>
+                        <option value="theme3">Purple</option>
+                        <option value="theme6">Blue</option>						
+                        <option value="theme1">Orange</option>
+                        <option value="theme7">Stone</option>
+                        <option value="theme9">Grey</option>         
+                        <option value="theme4">Navy</option>
+                        <option value="theme8">Yellow</option>
+                        
+                    </select></td>
+            	</tr>
+                <tr>
+                    <td><strong>Widget type</strong><br />
+                    <select id="widget_dropdown" onclick="display_switch()">
+                        <option value="events">Events</option>
+                        <option value="links">Links</option>
+                        <option value="news">News</option>
+                       	<option value="people">People</option>
+						<option value="recognition">Recognition</option>
+						<option value="text">Text</option>
+						<option value="html">HTML</option>
+						<option value="image">Image</option>
+						<option value="video">Video</option>
+                    </select></td>
+            	</tr>
+                <tr>
+                    <td><strong>Placement</strong><br />
+                    <select id="placement_dropdown">
+                        <option value="side_200">Side - 200px</option>
+                        <option value="side_250">Side - 250px</option>
+						<option value="side_300">Side - 300px</option>
+						<option value="side_350">Side - 350px</option>
+						<option value="side_400">Side - 400px</option>
+                        <option value="center">Center</option>
+                    </select></td>
+                </tr>
+
+            </tbody></table>
+        </div>
+        <div style="width:78%; float:left;">
+            <div class="widget_tabs">
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab-1">Layout</li>
+                    <li class="tab-link" id="options_tab" data-tab="tab-2">Options</li>
+                    <li class="tab-link" id="options_tab_html_text" data-tab="tab-6" style="display: none;">Options</li>
+                    <li class="tab-link" id="content_tab_html_text" data-tab="tab-7" style="display: none;">Content</li>
+                    <li class="tab-link" id="categories_tab" data-tab="tab-3">Categories</li>
+                    <li class="tab-link" id="thumbnails_tab" data-tab="tab-4" style="display: none;">Thumbnails</li>
+                    <li class="tab-link" id="archive_tab" data-tab="tab-5">Archive</li>
+                </ul>
+                <!--LAYOUT TAB-->
+                <div id="tab-1" class="tab-content current">
+                    <div class="width_33" style="border-right:1px dotted #999;">
+                    <div style="color: #336699">Container</div>
+                        <table width="100%">
+                            <tbody><tr>
+                                <td width="100px">Title</td>
+                                <td><a class="button button_title active" id="button_title"></a></td>
+                            </tr>
+                            <tr>
+                                <td>Header</td>
+                                <td><select id="header_dropdown">
+                                        <option value="solid">On</option>
+                                        <option value="light" selected="">Light</option>
+                                        <option value="off">off</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td>Underline</td>
+                                <td><select id="underline_dropdown">
+                                        <option value="none">None</option>
+                                        <option value="underline-solid" selected="">Solid</option>
+                                        <option value="underline-dotted">dotted</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td>Icon</td>
+                                <td><select id="icon_dropdown">
+                                        <option value="none">None</option>
+                                        <option value="">No background</option>
+                                        <option value="tab-background" selected="">Tab</option>
+                                        <option value="square-background">Square</option>
+                                        <option value="round-square-background">Rounded-square</option>
+                                        <option value="circle-background">Circle</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td>Background</td>
+                                <td><a class="button button_background" id="button_background"></a></td>
+                            </tr>
+                            <tr>
+                                <td>Bottom Line</td>
+                                <td><a class="button button_bottom_line active" id="button_bottom_line"></a></td>
+                            </tr>
+                            <tr>
+                                <td>Border</td>
+                                <td><a class="button button_border" id="button_border"></a></td>
+                            </tr>
+                        </tbody></table>
+    
+                    </div>
+                    <div class="width_33" style="background:#eee;">
+                        <div style="color: #336699">Positioning</div>
+                        <table>
+                            <tbody><tr>
+                                <td>Column</td>
+                                <td class="disabled"><select>
+                                      <option value="">1</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td>Sort</td>
+                                <td class="disabled"><select>
+                                      <option value="">1</option>
+                                    </select></td>
+                            </tr>
+                        </tbody></table>
+                        <div style="border-bottom:1px dotted #999; margin: 20px 0px 20px 0px;"></div>
+                        <div style="color: #336699">Spacing</div>
+                        <table>
+                            <tbody><tr>
+                                <td>Width</td>
+                                <td class="disabled"><select>
+                                      <option value="">100%</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td>Margin</td>
+                                <td class="disabled"><select>
+                                      <option value="">10px</option>
+                                    </select></td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!--OPTIONS TAB-->
+                <div id="tab-2" class="tab-content">
+                     <table>
+                        <tbody><tr>
+                            <td>Display</td>
+                            <td><select id="display_dropdown" onclick="display_switch()">
+                                    <option value="list" selected="">List</option>
+                                    <option value="summary">Summary</option>
+                                    <option value="thumbnails">Thumbnails</option>
+                                    <option value="slideshow" disabled="">Slideshow</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Feature</td>
+                            <td class="disabled"><select id="feature_dropdown">
+                                    <option value="feature-no">no</option>
+                                    <option value="feature-yes">yes</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Count</td>
+                            <td><select id="count_dropdown" onclick="display_switch()">
+                                    <option value="20">All</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Icon</td>
+                            <td><select id="content_icon_dropdown" onclick="display_switch()">
+                                    <option value="arrow1">arrow</option>
+                                    <option value="round-bullet">round bullet</option>
+                                    <option value="square-bullet">square bullet</option>
+                                    <option value="image">image</option>
+                                    <option value="calendar" id="cal_ico_option" style="display: block;">calendar</option>
+                                    <option value="">none</option>
+                                </select>
+                            </td>
+                        </tr>
+                     </tbody></table>
+                </div>
+
+                <!--OPTIONS TAB-->
+                <div id="tab-6" class="tab-content">
+                     <table class="icon_option_dropdown_switch">
+                        <tbody><tr>
+                            <td>Display</td>
+                            <td><select id="icon_option_dropdown">
+                                    <option value="option1" selected=""></option>
+                                    <option value="option2"></option>
+                                    <option value="option3"></option>
+                                    <option value="option4"></option>
+                                    <option value="option5"></option>
+                                    <option value="option6"></option>
+                                    <option value="option7"></option>
+                                    <option value="option8"></option>
+                                    <option value="option9"></option>
+                                    <option value="option10"></option>
+                                    <option value="option11"></option>
+                                    <option value="option12"></option>
+                                    <option value="option13"></option>
+                                    <option value="option14"></option>
+                                    <option value="option15"></option>
+                                    <option value="option16"></option>
+                                    <option value="option17"></option>
+                                    <option value="option18"></option>
+                                    <option value="option19"></option>
+                                    <option value="option20"></option>
+                                    <option value="option21"></option>
+                                    <option value="option22"></option>
+                                    <option value="option23"></option>
+                                    <option value="option24"></option>
+                                    <option value="option25"></option>
+                                    <option value="option26"></option>
+                                    <option value="option27"></option>
+                                    <option value="option28"></option>
+                                </select>
+                            </td>
+                        </tr>                     
+                    </tbody></table>
+                </div>
+                <!--CATEGORIES TAB-->
+                <div id="tab-3" class="tab-content">
+                    No categories are available in this demo
+                </div>
+                 <!--CONTENT TAB FOR HTML AND TEXT WIDGETS-->
+                <div id="tab-7" class="tab-content">
+                    Changing the content is not available in this demo
+                </div>
+
+                <!--THUMBNAILS TAB-->
+                <div id="tab-4" class="tab-content">
+                    <table>
+                        <tbody><tr>
+                            <td>Per Row</td>
+                            <td><select id="thumbnails_per_row_dropdown">
+                                    <option value="thumbnail-size w1">1</option>
+                                    <option value="w2">2</option>
+                                    <option value="w3">3</option>
+                                    <option value="w4">4</option>
+                                    <option value="w5">5</option>
+                                    <option value="w6">6</option>
+                                    <option value="w7">7</option>
+                                    <option value="w8">8</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aspect ratio</td>
+                            <td><select class="disabled" id="thumbnails_aspect_ratio_dropdown">
+                                    <option value="aspect_16-9">16:9</option>
+                                    <option value="aspect_5-7">5:7</option>
+                                    <option value="aspect_4-5">4:5</option>
+                                    <option value="aspect_4-3">4:3</option>
+                                    <option value="aspect_2-3">2:3</option>
+                                    <option value="aspect_1-1">1:1</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Title</td>
+                            <td><select id="thumbnails_title_display" onclick="display_switch()">
+                                    <option value="oly" selected="">overlay</option>
+                                    <option value="std">standard</option>
+                                    <option value="hov">hover</option>
+                                    <option value="off">off</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Summary</td>
+                            <td><select id="thumbnails_summary_display" onclick="display_switch()">
+                                    <option value="off">off</option>
+                                    <option value="oly" id="thumbnail_summary_overlay">overlay</option>
+                                    <option value="std">standard</option>
+                                    <option value="hov">hover</option>
+                                </select>
+                            </td>
+                        </tr>
+                     </tbody></table>
+                </div>
+                <!--ARCHIVE TAB-->
+                <div id="tab-5" class="tab-content">
+                    <table>
+                        <tbody><tr>
+                            <td>Type</td>
+                            <td><select id="archive_type">
+                                    <option value="background">Solid</option>
+                                    <option value="" selected="">transparent</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Color</td>
+                            <td><select id="archive_color">
+                                    <option value="theme">theme</option>
+                                    <option value="gray">gray</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Icon</td>
+                            <td><select id="archive_icon">
+                                    <option value="arrow">arrow</option>
+                                    <option value="plus" selected="">plus</option>
+                                    <option value="video" id="video_ico_option" style="display: none;">video</option>
+                                    <option value="">none</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Text</td>
+                            <td>
+                                <!-- <form action="">
+                                  <input type="text" id="input" /><button type="button" id="button">Apply</button>
+                                </form>-->
+                               <select id="archive_text">
+                                	<option value="hide" selected="">none</option>
+                                    <option value="more">More</option>
+                                    <option value="view">View the archive</option>
+                                    <option value="ondemand" id="video_archive_option" style="display: none;">View our channel on ES onDemand</option>
+                                </select>
+ 
+                            </td>
+                        </tr>
+                        <tr class="disabled">
+                            <td>Link</td>
+                            <td><input type="text" name="URL" value="URL not necessary for demo" /></td>
+                        </tr>
+                     </tbody></table>
+                </div>
+            </div><!-- container -->
+        </div>
+      </div>
+    </div>
+<script>
+$(document).ready(function(e) {
+    //loadEventsDoc();
+	//events_list_info();
+	display_switch();
+});
+
+
+function display_switch(){
+	hide_thumbnail_tab();
+	hide_options_tab_html_text();
+	hide_content_tab();
+	hide_cal_ico_option();
+	hide_video_ico_option();
+	show_categories_tab();
+	show_options_tab();
+	if(widget_dropdown.value == "events"){events();}
+	else if(widget_dropdown.value == "links"){links();}
+	else if(widget_dropdown.value == "news"){news();}
+	else if(widget_dropdown.value == "people"){people();}
+	else if(widget_dropdown.value == "recognition"){recognition();}
+	else if(widget_dropdown.value == "text"){text();}
+	else if(widget_dropdown.value == "html"){html2();}
+	else if(widget_dropdown.value == "image"){image();}
+	else if(widget_dropdown.value == "video"){video();}
+	else{console.log('outside of display switch if statement');}
+}
+//EVENTS DISPLAYS AREA-----------------------------------------------------------------------//
+function events(){
+	show_cal_ico_option();
+	console.log('Widget has class Events');
+	var dsp= $('#display_dropdown').val();
+	var url='xml/events.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('event');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			var row = $('#thumbnails_per_row_dropdown').val();
+			var thumb_ttl= $('#thumbnails_title_display').val();
+			var thumb_sum= $('#thumbnails_summary_display').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				var month=$this.find('month').text().trim();
+				var day=$this.find('day').text().trim();
+				var start=$this.find('start').text().trim();
+				var end=$this.find('end').text().trim();
+				var img=$this.find('img').text().trim();
+				switch(dsp) {
+					case "list":
+						if (i <= count){
+							switch (ico_type) {
+								case "image":
+									if(start == end){
+										html +='<div class="image"><div><div><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36">'+ttl+'</a></span><div>'+start+'</div></div></div>'	
+									}else{html +='<div class="image"><div><div><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36">'+ttl+'</a></span><div>'+start+' - '+end+'</div></div></div>'}
+									break;
+								case "calendar":
+									if(start == end){
+										html +='<div class="calendar"><div><div>'+month+'</div><div>'+day+'</div></div><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">'+ttl+'</a><div class="display_date">'+start+'</div></span></div></div>'	
+									}else{html +='<div class="calendar"><div><div>'+month+'</div><div>'+day+'</div></div><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">'+ttl+'</a><div class="display_date">'+start+' - '+end+'</div></span></div></div>'}
+									break;
+								case "none":
+									if(start == end){
+										html+='<div class="icon"><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">'+ttl+'</a></span><div class="display_date">'+start+'</div></div></div>'	
+									}else{html+='<div class="icon"><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">'+ttl+'</a></span><div class="display_date">'+start+' - '+end+'</div></div></div>'}
+									break;
+								default:
+									if(start == end){
+										html+='<div class="icon '+icon+'"><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">'+ttl+'</a></span><div class="display_date">'+start+'</div></div></div>'	
+									}else{html+='<div class="icon '+icon+'"><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">'+ttl+'</a></span><div class="display_date">'+start+' - '+end+'</div></div></div>'}
+							}
+							i++;
+						}else{return false;}
+						break;
+					case "summary":
+						if (i <= count){
+							switch (ico_type) {
+								case "image":
+									if(start == end){
+										html +='<div class="image"><div><div><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36">'+ttl+'</a></span><div>'+start+'</div><div class="text">'+txt+'<span class="nowrap">…<a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36">more</a></span></div></div></div>'	
+									}else{html +='<div class="image"><div><div><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36">'+ttl+'</a></span><div>'+start+' - '+end+'</div><div class="text">'+txt+'<span class="nowrap">…<a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="36">more</a></span></div></div></div>'}
+									break;
+								case "calendar":
+									if(start == end){
+										html +='<div class="calendar"><div><div>'+month+'</div><div>'+day+'</div></div><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">'+ttl+'</a></span><div>'+start+'</div><div class="text">'+txt+'<span class="nowrap">…<a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">more</a></span></div></div></div>'	
+									}else{html +='<div class="calendar"><div><div>'+month+'</div><div>'+day+'</div></div><div><span class="'+ttl+'"><a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">'+ttl+'</a></span><div>'+start+' - '+end+'</div><div class="text">'+txt+'<span class="nowrap">…<a href="" class="jnav" title="'+ttl+'" data-type="Events" data-id="34">more</a></span></div></div></div>'}
+									break;
+								case "none":
+									if(start == end){
+										html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="display_date">'+start+'</div><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'	
+									}else{html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="display_date">'+start+' - '+end+'</div><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'}
+									break;
+								default:
+									if(start == end){
+										html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="display_date">'+start+'</div><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'	
+									}else{html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="display_date">'+start+' - '+end+'</div><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'}
+
+							}
+							i++;
+					
+						}else{return false;}
+						break;
+					case "thumbnails":
+						show_thumbnail_tab();
+						if (i <= count){
+							switch (thumb_ttl) {
+								case "oly":
+									console.log('events thumbnail overlay title applied');
+									if(txt != ''){
+										console.log('events thumbnail overlay title applied - summary text present');
+										if (thumb_sum=='oly'){
+											console.log('events thumbnail overlay title applied - overlay summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">… more</span></div></div></div></div></div></div></div>'
+										}else if(thumb_sum=='std'){
+											console.log('events thumbnail overlay title applied - standard summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+										}else if (thumb_sum=='hov'){
+											console.log('events thumbnail overlay title applied - hover summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+										}else{
+											console.log('summary is turned off');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+											}
+									}else{
+										console.log('no summary available');
+										html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+									}
+									break;
+								case "std":
+									console.log('events thumbnail standard title applied');
+									if(txt != ''){
+										console.log('events thumbnail standard title applied - summary text present');
+										if (thumb_sum=='oly'){
+											console.log('events thumbnail overlay title applied - overlay summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"<div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+										}else if(thumb_sum=='std'){
+											console.log('events thumbnail overlay title applied - standard summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+										}else if (thumb_sum=='hov'){
+											console.log('events thumbnail overlay title applied - hover summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+										}else{
+											console.log('summary is turned off');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+											}
+									}else{
+										console.log('no summary available');
+										html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+									}
+									break;
+								case "hov":
+									console.log('events thumbnail hover title applied');
+									if(txt != ''){
+										console.log('events thumbnail standard title applied - summary text present');
+										if(thumb_sum=='std'){
+											console.log('events thumbnail overlay title applied - standard summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+										}else if (thumb_sum=='hov'){
+											console.log('events thumbnail overlay title applied - hover summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div></div>'
+										}else{
+											console.log('summary is turned off');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+											}
+									}else{
+										console.log('no summary available');
+										html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+									}
+									break;
+								case "off":
+									console.log('events thumbnail title removed');
+									if(txt != ''){
+										console.log('events thumbnail standard title applied - summary text present');
+										if (thumb_sum=='oly'){
+											console.log('events thumbnail overlay title applied - overlay summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+										}else if(thumb_sum=='std'){
+											console.log('events thumbnail overlay title applied - standard summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+										}else if (thumb_sum=='hov'){
+											console.log('events thumbnail overlay title applied - hover summary applied');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+										}else{
+											console.log('summary is turned off');
+											html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div></div></div></div></div>'
+											}
+									}else{
+										console.log('no summary available');
+										html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="calendar"><div>'+month+'</div><div>'+day+'</div></div></div></div></div></div>'
+									}
+									break;
+							}
+							i++;	
+						}else{return false;}
+						break;
+					}
+					
+				});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading Events XML');
+		}
+	});
+}
+//LINKS DISPLAYS AREA-----------------------------------------------------------------------//
+function links(){
+	console.log('Widget has class Links');
+	var dsp= $('#display_dropdown').val();
+	if(dsp == 'list'){links_list();
+	}else if(dsp == 'summary'){links_summary();
+	}else if(dsp == 'thumbnails'){
+		links_thumbnails();		
+		show_thumbnail_tab();
+	}else{console.log('outside of if statement');}
+}
+function links_list(){
+	var url='xml/links.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('link');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (ico_type=='arrow1' || ico_type=='round-bullet' || ico_type=='square-bullet'){
+						//console.log('icon is set to arrow, round bullet or square bullet');			
+						html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" title="'+ttl+'" data-type="Links" data-id="168">'+ttl+'</a></span></div></div>'
+					}else if (ico_type=='image'){
+						html+='<div class="image"><div><div><a href="" title="'+ttl+'" data-type="Links" data-id="134"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" title="'+ttl+'" data-type="Links" data-id="134">'+ttl+'</a></span></div></div>'
+					}else{
+						html+='<div class="icon" id="icon"><div><span class="title"><a href="" title="'+ttl+'" data-type="Links" data-id="168">'+ttl+'</a></span></div></div>'
+					}
+				}else{return false;}
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading Events XML');
+		}
+	});	
+}
+function links_summary(){
+	var url='xml/links.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('link');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (ico_type=='arrow1' || ico_type=='round-bullet' || ico_type=='square-bullet'){
+						//console.log('icon is set to arrow, round bullet or square bullet');			
+						html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'
+					}else if (ico_type=='image'){
+						html+='<div class="image"><div><div><a href="" title="'+ttl+'" data-type="Links"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" title="'+ttl+'" data-type="Links">'+ttl+'</a></span><div class="text">'+txt+'</div></div></div>'
+					}else{
+						html+='<div class="icon" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'
+					}
+
+					html+=''
+				}else{return false;}
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading Events XML');
+		}
+	});	
+}
+
+function links_thumbnails(){
+	var url='xml/links.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('link');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var row = $('#thumbnails_per_row_dropdown').val();
+			var thumb_ttl= $('#thumbnails_title_display').val();
+			var thumb_sum= $('#thumbnails_summary_display').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (thumb_ttl=='oly'){
+						console.log('events thumbnail overlay title applied');
+						if(txt != ''){
+							console.log('events thumbnail overlay title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">… more</span></div></div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+						}
+					}else if (thumb_ttl=='std'){
+						console.log('events thumbnail standard title applied');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+						}
+					}else if (thumb_ttl=='hov'){
+						console.log('events thumbnail hover title applied');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+						}
+
+					}else if (thumb_ttl=='off'){
+						console.log('events thumbnail title removed');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div></div></div></div>'
+						}
+
+					}else{console.log('if statement error');}
+				}else{return false;}
+
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading Events XML');
+		}
+	});	
+}
+
+//NEWS DISPLAYS AREA-----------------------------------------------------------------------//
+function news(){
+	console.log('Widget has class News');
+	var dsp= $('#display_dropdown').val();
+	//console.log('display is set to '+dsp+'');
+	if(dsp == 'list'){news_list();
+	}else if(dsp == 'summary'){news_summary();
+	}else if(dsp == 'thumbnails'){
+		news_thumbnails();
+		show_thumbnail_tab();
+	}else{console.log('outside of if statement');}
+}
+function news_list(){
+	var url='xml/news.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('news');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (ico_type=='arrow1' || ico_type=='round-bullet' || ico_type=='square-bullet'){
+						html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" title="'+ttl+'" data-type="News" data-id="168">'+ttl+'</a></span></div></div>'
+					}else if (ico_type=='image'){
+						html+='<div class="image"><div><div><a href="" title="'+ttl+'" data-type="News"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" title="'+ttl+'" data-type="News">'+ttl+'</a></span></div></div>'
+					}else{
+						html+='<div class="icon" id="icon"><div><span class="title"><a href="" title="'+ttl+'" data-type="News" data-id="168">'+ttl+'</a></span></div></div>'
+					}			
+				}else{return false;}
+
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+function news_summary(){
+	var url='xml/news.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('news');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (ico_type=='arrow1' || ico_type=='round-bullet' || ico_type=='square-bullet'){
+						html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'
+					}else if (ico_type=='image'){
+						html+='<div class="image"><div><div><a href="" title="'+ttl+'" data-type="News"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" title="'+ttl+'" data-type="News">'+ttl+'</a></span><div class="text">'+txt+'</div></div></div>'
+					}else{
+						html+='<div class="icon" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'
+					}
+				}else{return false;}
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+function news_thumbnails(){
+	var url='xml/news.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('news');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var row = $('#thumbnails_per_row_dropdown').val();
+			var thumb_ttl= $('#thumbnails_title_display').val();
+			var thumb_sum= $('#thumbnails_summary_display').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (thumb_ttl=='oly'){
+						console.log('events thumbnail overlay title applied');
+						if(txt != ''){
+							console.log('events thumbnail overlay title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">… more</span></div></div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+						}
+					}else if (thumb_ttl=='std'){
+						console.log('events thumbnail standard title applied');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+						}
+					}else if (thumb_ttl=='hov'){
+						console.log('events thumbnail hover title applied');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+						}
+
+					}else if (thumb_ttl=='off'){
+						console.log('events thumbnail title removed');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div></div></div></div>'
+						}
+					}else{console.log('if statement error');}
+				}else{return false;}
+
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+//PEOPLE DISPLAYS AREA-----------------------------------------------------------------------//
+function people(){
+	console.log('Widget has class People');
+	var dsp= $('#display_dropdown').val();
+	if(dsp == 'list'){people_list();
+	}else if(dsp == 'summary'){people_summary();
+	}else if(dsp == 'thumbnails'){
+		people_thumbnails();
+		show_thumbnail_tab();
+	}else{console.log('outside of if statement');}
+}
+function people_list(){
+	var url='xml/people.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('people');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (ico_type=='arrow1' || ico_type=='round-bullet' || ico_type=='square-bullet'){
+						html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" title="'+ttl+'" data-type="Links" data-id="168">'+ttl+'</a></span></div></div>'
+					}else if (ico_type=='image'){
+						html+='<div class="image"><div><div><a href="" title="'+ttl+'" data-type="People"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" title="'+ttl+'" data-type="People">'+ttl+'</a></span></div></div>'
+					}else{
+						html+='<div class="icon" id="icon"><div><span class="title"><a href="" title="'+ttl+'" data-type="Links" data-id="168">'+ttl+'</a></span></div></div>'
+					}					
+					
+				}else{return false;}
+
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+function people_summary(){
+	var url='xml/people.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('people');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (ico_type=='arrow1' || ico_type=='round-bullet' || ico_type=='square-bullet'){
+						html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'
+					}else if (ico_type=='image'){
+						html+='<div class="image"><div><div><a href="" title="'+ttl+'" data-type="People"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" title="'+ttl+'" data-type="People">'+ttl+'</a></span><div class="text">'+txt+'</div></div></div>'
+					}else{
+						html+='<div class="icon" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'
+					}	
+					
+				}else{return false;}
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+function people_thumbnails(){
+	var url='xml/people.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('people');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var row = $('#thumbnails_per_row_dropdown').val();
+			var thumb_ttl= $('#thumbnails_title_display').val();
+			var thumb_sum= $('#thumbnails_summary_display').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (thumb_ttl=='oly'){
+						console.log('events thumbnail overlay title applied');
+						if(txt != ''){
+							console.log('events thumbnail overlay title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">… more</span></div></div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+						}
+					}else if (thumb_ttl=='std'){
+						console.log('events thumbnail standard title applied');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+						}
+					}else if (thumb_ttl=='hov'){
+						console.log('events thumbnail hover title applied');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+						}
+
+					}else if (thumb_ttl=='off'){
+						console.log('events thumbnail title removed');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div></div></div></div>'
+						}
+
+					}else{console.log('if statement error');}
+				}else{return false;}
+
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+//RECOGNITION DISPLAYS AREA-----------------------------------------------------------------------//
+function recognition(){
+	console.log('Widget has class News');
+	var dsp= $('#display_dropdown').val();
+	//console.log('display is set to '+dsp+'');
+	if(dsp == 'list'){recognition_list();
+	}else if(dsp == 'summary'){recognition_summary();
+	}else if(dsp == 'thumbnails'){
+		recognition_thumbnails();
+		show_thumbnail_tab();
+	}else{console.log('outside of if statement');}
+}
+function recognition_list(){
+	var url='xml/recognition.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('recognition');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (ico_type=='arrow1' || ico_type=='round-bullet' || ico_type=='square-bullet'){
+						html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" title="'+ttl+'" data-type="Links" data-id="168">'+ttl+'</a></span></div></div>'
+					}else if (ico_type=='image'){
+						html+='<div class="image"><div><div><a href="" title="'+ttl+'" data-type="Links"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" title="'+ttl+'" data-type="Links">'+ttl+'</a></span></div></div>'
+					}else{
+						html+='<div class="icon" id="icon"><div><span class="title"><a href="" title="'+ttl+'" data-type="Links" data-id="168">'+ttl+'</a></span></div></div>'
+					}				
+					
+				}else{return false;}
+
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+function recognition_summary(){
+	var url='xml/recognition.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('recognition');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var icon = $('#content_icon_dropdown').val();
+			var ico_type= $('#content_icon_dropdown').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (ico_type=='arrow1' || ico_type=='round-bullet' || ico_type=='square-bullet'){
+						html+='<div class="icon '+icon+'" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'
+					}else if (ico_type=='image'){
+						html+='<div class="image"><div><div><a href="" title="'+ttl+'" data-type="Links"><img src="'+img+'" title="'+ttl+'"></a></div></div><div><span class="title"><a href="" title="'+ttl+'" data-type="Links">'+ttl+'</a></span><div class="text">'+txt+'</div></div></div>'
+					}else{
+						html+='<div class="icon" id="icon"><div><span class="title"><a href="" >'+ttl+'</a></span><div class="text">'+txt+'<span class="nowrap"></span></div></div></div>'}	
+					
+				}else{return false;}
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+function recognition_thumbnails(){
+	var url='xml/recognition.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('recognition');
+			var html = '';
+			var i = 1;
+			var count = $('#count_dropdown').val();
+			var row = $('#thumbnails_per_row_dropdown').val();
+			var thumb_ttl= $('#thumbnails_title_display').val();
+			var thumb_sum= $('#thumbnails_summary_display').val();
+			$set.each(function() {
+				var $this = $(this);
+				var ttl=$this.find('title').text().trim();
+				var txt=$this.find('summary').text().trim();
+				var img=$this.find('img').text().trim();
+				if (i <= count){
+					//console.log('The title is: ' +ttl);
+					i++;
+					if (thumb_ttl=='oly'){
+						console.log('events thumbnail overlay title applied');
+						if(txt != ''){
+							console.log('events thumbnail overlay title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">… more</span></div></div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl oly"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+						}
+					}else if (thumb_ttl=='std'){
+						console.log('events thumbnail standard title applied');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="thumb_ttl std"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div>'
+						}
+					}else if (thumb_ttl=='hov'){
+						console.log('events thumbnail hover title applied');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="thumb_ttl hover"><div class="title"><div>'+ttl+'</div></div></div></div></div></div></div></div>'
+						}
+
+					}else if (thumb_ttl=='off'){
+						console.log('events thumbnail title removed');
+						if(txt != ''){
+							console.log('events thumbnail standard title applied - summary text present');
+							if (thumb_sum=='oly'){
+								console.log('events thumbnail overlay title applied - overlay summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else if(thumb_sum=='std'){
+								console.log('events thumbnail overlay title applied - standard summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div><div class="text"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div>'
+							}else if (thumb_sum=='hov'){
+								console.log('events thumbnail overlay title applied - hover summary applied');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"><div class="oly"><div class="text hover"><div>'+txt+'<span class="nowrap">…more</span></div></div></div></div></div></div></div>'
+							}else{
+								console.log('summary is turned off');
+								html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div></div></div></div>'
+								}
+						}else{
+							console.log('no summary available');
+							html += '<div class="thumbnail '+row+'"><div class=""><div><div><img src="'+img+'" class="width"></div></div></div></div>'
+						}
+
+					}else{console.log('if statement error');}
+				}else{return false;}
+
+			});
+			$('#item').empty().append(html);
+
+		},error:function(xml){
+			console.log('Error loading News XML');
+		}
+	});	
+}
+
+function text(){
+	show_options_tab_html_text();
+	show_content_tab();
+	hide_options_tab();
+	hide_categories_tab();
+	console.log('Widget has class Text');
+	var url='xml/text.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('text');
+			var html = '';
+			$set.each(function() {
+				var $this = $(this);
+				var con=$this.find('content').text().trim();
+					html+='<div>'+con+'</div>'	
+				});
+			$('#item').empty().append(html);
+		},error:function(xml){
+			console.log('Error loading text XML');
+		}
+	});	
+}
+function html2(){
+	show_options_tab_html_text();
+	show_content_tab();
+	hide_options_tab();
+	hide_categories_tab();
+	console.log('Widget has class HTML');
+	var url='xml/html2.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('code');
+			var html = '';
+			$set.each(function() {
+				var $this = $(this);
+				var con=$this.find('content').text().trim();
+					html+='<div>'+con+'</div>'	
+				});
+			$('#item').empty().append(html);
+		},error:function(xml){
+			console.log('Error loading HTML XML');
+		}
+	});	
+}
+function image(){
+	hide_options_tab_html_text();
+	hide_content_tab();
+	hide_options_tab();
+	hide_categories_tab();
+	console.log('Widget has class image');
+	var url='xml/image.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('image');
+			var html = '';
+			$set.each(function() {
+				var $this = $(this);
+				var con=$this.find('content').text().trim();
+					html+='<div><img src="'+con+'" title="image widget"></div>'	
+				});
+			$('#item').empty().append(html);
+		},error:function(xml){
+			console.log('Error loading image XML');
+		}
+	});	
+}
+function video(){
+	show_video_ico_option();
+	hide_options_tab_html_text();
+	hide_content_tab();
+	hide_options_tab();
+	hide_categories_tab();
+	console.log('Widget has class video');
+	var url='xml/video.xml';
+	$.ajax({
+		type:'POST',
+		url:url,
+		dataType:'xml',
+		success:function(xml){
+			//console.log('SUCCESS');
+			var $set=$(xml).find('video');
+			var html = '';
+			$set.each(function() {
+				var $this = $(this);
+				var vid=$this.find('vid').text().trim();
+				var poster=$this.find('poster').text().trim();
+					html+='<div id="wdgt18" class="none" data-ratio="16:9"><div class="vidnail r169" style=""><video controls="" poster="'+poster+'" width="640" height="360"><source src="'+vid+'"></video></div></div>'	
+				});
+			$('#item').empty().append(html);
+		},error:function(xml){
+			console.log('Error loading HTML XML');
+		}
+	});	
+}
+
+//THEME DROPDOWN SWITCH//
+$('#theme_dropdown').change(function(){
+    $(".widget")
+    	.removeClass('default theme1 theme2 theme3 theme4 theme5 theme6 theme7 theme8 theme9')	
+    	.addClass( $(this).val() );	
+  })
+//WIDGET TYPE SWITCH//
+$('#widget_dropdown').change(function(){
+    $(".widget")
+    	.removeClass('events links news people recognition text html image video')	
+    	.addClass( $(this).val() );
+    $("#item")
+    	.removeClass('events links news people recognition text html image video')	
+    	.addClass( $(this).val() );
+  })
+//
+//PLACEMENT SIZE SWITCH//
+$('#placement_dropdown').change(function(){
+    $(".widget")
+    	.removeClass('side_200 side_250 side_300 side_350 side_400 center')	
+    	.addClass( $(this).val() );	
+  })
+
+//SIDE-SIZE SWITCH//
+$('#size_dropdown').change(function(){
+    $(".widget")
+    	.removeClass('side_200 side_250 side_300 side_350 side_400')	
+    	.addClass( $(this).val() );
+  })
+
+//CONTENT TABS//
+$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+	
+//----------------LAYOUT TAB ---------------//
+//TITLE ON/OFF SWITCH//
+document.getElementById('button_title').onclick = function(){
+	$(".header .title").each(function() {
+		$(this).toggleClass("hide");
+		$('#header').toggleClass("hide");
+		});
+  document.getElementsByClassName('button_title')[0].classList.toggle("active");
+}	
+//HEADER ON/LIGHT/OFF SWITCH//
+$('#header_dropdown').change(function(){
+    $(".header")
+    	.removeClass('solid light off')	
+    	.addClass( $(this).val() );	
+  })
+//HEADER UNDERLINE SWITCH//	
+$('#underline_dropdown').change(function(){
+    $(".header")
+    	.removeClass('off underline-solid underline-dotted')	
+    	.addClass( $(this).val() );	
+  })	
+//ICON DROPDOWN SWITCH//
+$('#icon_dropdown').change(function(){
+    $(".ico")
+    	.removeClass('none tab-background square-background round-square-background circle-background')	
+    	.addClass( $(this).val() );	
+  })
+//TOGGLE BACKGROUND//
+document.getElementById('button_background').onclick = function(){
+	$(".content").each(function() {
+		$(this).toggleClass("background");
+		});
+  document.getElementsByClassName('button_background')[0].classList.toggle("active");
+}
+//TOGGLE BOTTOM LINE//
+document.getElementById('button_bottom_line').onclick = function(){
+  document.getElementsByClassName('content-placeholder')[0].classList.toggle("bottom-line");
+  document.getElementsByClassName('button_bottom_line')[0].classList.toggle("active");
+}
+//TOGGLE BORDER//
+document.getElementById('button_border').onclick = function(){
+	$(".header").each(function() {
+		$(this).toggleClass("border");
+		});
+	$(".content").each(function() {
+		$(this).toggleClass("border");
+		});
+  document.getElementsByClassName('button_border')[0].classList.toggle("active");
+}
+
+//----------------OPTIONS TAB --------------//
+$('#display_dropdown').change(function(){
+    $(".item")
+    	.removeClass('list summary thumbnails slideshow')	
+    	.addClass( $(this).val() );	
+  })
+
+$('#content_icon_dropdown').change(function(){
+    $(".icon")
+    	.removeClass('arrow1 round-bullet square-bullet image')	
+    	.addClass( $(this).val() );	
+  })
+function hide_thumbnail_tab(){$("#thumbnails_tab").hide();}
+function show_thumbnail_tab(){$("#thumbnails_tab").show();}
+
+function hide_options_tab(){$("#options_tab").hide();}
+function show_options_tab(){$("#options_tab").show();}
+
+function hide_options_tab_html_text(){$("#options_tab_html_text").hide();}
+function show_options_tab_html_text(){$("#options_tab_html_text").show();}
+
+function hide_categories_tab(){$("#categories_tab").hide();}
+function show_categories_tab(){$("#categories_tab").show();}
+
+function hide_content_tab(){$("#content_tab_html_text").hide();}
+function show_content_tab(){$("#content_tab_html_text").show();}
+
+function hide_cal_ico_option(){$("#cal_ico_option").hide();}
+function show_cal_ico_option(){$("#cal_ico_option").show();}
+
+function hide_thumbnail_summary_overlay(){$("#thumbnail_summary_overlay").hide();}
+function show_thumbnail_summary_overlay(){$("#thumbnail_summary_overlay").show();}
+
+
+function hide_video_ico_option(){
+	$("#video_ico_option").hide(); 
+	$("#video_archive_option").hide();
+}
+function show_video_ico_option(){
+	$("#video_ico_option").show();
+	$("#video_archive_option").show();
+}
+$('#icon_option_dropdown').change(function(){
+    $(".ico")
+    	.removeClass('option1 option2 option3 option4 option5 option6 option7 option8 option9 option10 option11 option12 option13 option14 option15 option16 option17 option18 option19 option20 option21 option22 option23 option24 option25 option26 option27 option28')	
+    	.addClass( $(this).val() );	
+  })
+
+//--------------THUMBNAILS TAB -------------//
+$('#thumbnails_per_row_dropdown').change(function(){
+    $(".thumbnail")
+    	.removeClass('w1 w2 w3 w4 w5 w6 w7 w8')	
+    	.addClass( $(this).val() );	
+  })
+
+$('#thumbnails_title_display').change(function(){
+	console.log('function activated');
+	show_thumbnail_summary_overlay();
+	var thumb_ttl= $('#thumbnails_title_display').val();
+	if(thumb_ttl=='hov'){
+		$('#thumbnails_summary_display option:first').prop('selected', 'selected');
+		hide_thumbnail_summary_overlay();
+	}else{}
+      	/*$(".thumb_ttl")
+    	.removeClass('oly std hov off')	
+    	.addClass( $(this).val() );*/
+  })
+
+
+/*function thumbnail_title_display(){
+	if(thumbnails_title_display.value == "oly"){console.log('SUCCESS');}
+	else if(thumbnails_title_display.value == "std"){console.log('SUCCESS');}
+	else if(thumbnails_title_display.value == "hov"){console.log('SUCCESS');}
+	else if(thumbnails_title_display.value == "off"){console.log('SUCCESS');}
+	else{console.log('thumbnail title display problem');}
+  }*/
+
+//--------------ARCHIVE TAB-----------------//
+//ARCHIVE TYPE
+$('#archive_type').change(function(){
+    $(".archive")
+    	.removeClass('background')	
+    	.addClass( $(this).val() );	
+  })
+//ARCHIVE COLOR
+$('#archive_color').change(function(){
+    $(".archive")
+    	.removeClass('theme gray')	
+    	.addClass( $(this).val() );	
+  })
+//ARCHIVE ICONS//
+$('#archive_icon').change(function(){
+    $(".archive")
+    	.removeClass('plus arrow video')	
+    	.addClass( $(this).val() );	
+  })
+//ARCHIVE TEXT
+
+$('#archive_text').change(function(){
+    $(".archive")
+    	.removeClass('more view ondemand hide')	
+    	.addClass( $(this).val() );	
+  })
+
+	
+/*$('#button').click(function () {
+	var text = $("#input");
+		if(text.val() === ""){
+			$(".archive").each(function() {
+				$(this).addClass("hide");
+			})
+		} else {			
+			$("#archive").each(function() {
+				$(this).empty();
+				$(this).html(''+text.val()+'');
+				$(this).removeClass("hide");
+			})
+    }
+ });*/
+//-----------------------------------------------------
+//                        TO DO:
+//-----------------------------------------------------
+//scope out alerts widget
+//scope out FAQ widget
+
+//implement remainder of color schemes
+//Style fixes
+//-----------------------------------------------------
+//                      FINISHED
+//-----------------------------------------------------
+//set up recognition, people, news, html, text, etc xml files
+//implement recognition, people, news, html, text, etc xml files display options
+//Hide thumbnails tab option for non-thumbnail layouts -- WORKING
+//Widget types set up -- WORKING
+	//events -- WORKING
+	//links -- WORKING
+	//recognition -- WORKING
+	//people -- WORKING
+	//news -- WORKING
+	//HTML -- WORKING
+	//Text -- WORKING
+	//image -- WORKING
+	//video -- WORKING
+//Layout
+	//Title on/off -- WORKING
+	//Header on/light/off -- WORKING
+	//underline solid/dotted/off -- WORKING
+	//icon none/no background/ tab/square/rounded-square/cirlce -- WORKING
+	//background on/off -- WORKING
+	//bottom line on/off -- WORKING
+	//border on/off -- WORKING
+
+//Options
+	//display - list, summary, thumbnails -- WORKING
+	//count -- WORKING
+	//icon arrow, round bullet, square bullet, calendar, image, off - WORKING
+		//implement calendar icon type -- WORKING
+		//hide calendar icon option for non-event types -- WORKING
+		//implement image icon type - WORKING
+
+//thumbnails
+	//per row -- WORKING
+	//aspect ratio -- deactivated
+	// title -- WORKING
+	//summary -- WORKING
+
+//archive tab
+	//color/grey icon options -- WORKING
+</script>
+</body>
+</html>
