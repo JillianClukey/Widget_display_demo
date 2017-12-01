@@ -6,6 +6,8 @@ General idea:
 - Allow user to customize look and feel
 - Make the widget adaptable to pull content from different types of lists (XML is used for this demo, but the code could easily be tweaked to pull from a custom SharePoint list)
 
+A working demo of this can be found on my website here: http://jclukeydesigns.com/widget_demo/Index.html
+
 This widget is capable of:
 - Displaying different types of content in different configurations, depending on the options the user chooses.
 - Allows the user to choose from a wide variety of display options, both for the headers and for the content itself.
