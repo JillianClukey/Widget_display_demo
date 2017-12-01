@@ -1,3 +1,6 @@
+// ========================================================================================================== //
+// A working demo of this code can be found on my website at http://jclukeydesigns.com/widget_demo/Index.html //
+// ========================================================================================================== //
 // JavaScript Document
 $(document).ready(function(e) {
 	display_switch();
