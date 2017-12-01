@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+	<event>
+		<title>Event 1</title>
+		<location>123 Generic St.</location>
+		<start>02/23/2017</start>
+		<end>02/23/2017</end>
+		<month>Feb</month>
+		<day>23</day>
+		<year>2017</year>
+		<summary></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 2</title>
+		<location>123 Generic St.</location>
+		<start>02/27/2017</start>
+		<end>02/28/2017</end>
+		<month>Feb</month>
+		<day>27</day>
+		<year>2017</year>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]]></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 3</title>
+		<location>123 Generic St.</location>
+		<start>03/03/2017</start>
+		<end>03/05/2017</end>
+		<month>Mar</month>
+		<day>3</day>
+		<year>2017</year>
+		<summary></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 4</title>
+		<location>123 Generic St.</location>
+		<start>03/06/2017</start>
+		<end>03/06/2017</end>
+		<month>Mar</month>
+		<day>6</day>
+		<year>2017</year>
+		<summary><![CDATA[ Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 5</title>
+		<location>123 Generic St.</location>
+		<start>03/07/2017</start>
+		<end>03/09/2017</end>
+		<month>Mar</month>
+		<day>7</day>
+		<year>2017</year>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. ]]></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 6</title>
+		<location>123 Generic St.</location>
+		<start>03/14/2017</start>
+		<end>03/15/2017</end>
+		<month>Mar</month>
+		<day>14</day>
+		<year>2017</year>
+		<summary><![CDATA[Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 7</title>
+		<location>123 Generic St.</location>
+		<start>03/16/2017</start>
+		<end>03/16/2017</end>
+		<month>Mar</month>
+		<day>16</day>
+		<year>2017</year>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 8</title>
+		<location>123 Generic St.</location>
+		<start>4/27/2017</start>
+		<end>4/27/2017</end>
+		<month>Apr</month>
+		<day>27</day>
+		<year>2017</year>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]]></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 9</title>
+		<location>123 Generic St.</location>
+		<start>2/20/2017</start>
+		<end>2/20/2017</end>
+		<month>Feb</month>
+		<day>20</day>
+		<year>2017</year>
+		<summary><![CDATA[Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	<event>
+		<title>Event 10</title>
+		<location>123 Generic St.</location>
+		<start>1/20/2017</start>
+		<end>2/17/2017</end>
+		<month>Jan</month>
+		<day>20</day>
+		<year>2017</year>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/event_filler.jpg</img>
+	</event>
+	
+</items>

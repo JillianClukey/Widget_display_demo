@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+	<people>
+		<title>Eleanor A. Roberson</title>
+		<summary><![CDATA[CEO]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Silas P. Cook</title>
+		<summary><![CDATA[COO]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Lissa A. Hatley</title>
+		<summary><![CDATA[Head of Marketing]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Margaret A. Winter</title>
+		<summary><![CDATA[Head of Operations]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Thomas J. Scott</title>
+		<summary><![CDATA[Head of Communications]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Damion R. Macdougall</title>
+		<summary><![CDATA[Head of HR]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Kellie T. Thompson</title>
+		<summary><![CDATA[Head of Contracts]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Pam T. Monahan</title>
+		<summary><![CDATA[Head of Engineering]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Timothy S. Jones</title>
+		<summary><![CDATA[Head of Security]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	<people>
+		<title>Carla F. Gill</title>
+		<summary><![CDATA[Head of Finance]]></summary>
+		<img>default_images/people_filler.jpg</img>
+	</people>
+	
+</items>

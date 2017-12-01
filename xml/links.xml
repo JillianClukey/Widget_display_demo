@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+	<link>
+		<title>Google</title>
+		<url>http://www.google.com</url>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>CNN</title>
+		<url>http://www.cnn.com</url>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>WMUR</title>
+		<url>http://www.wmur.com</url>
+		<summary><![CDATA[]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>WCVB</title>
+		<url>http://www.wcvb.com</url>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>Yahoo</title>
+		<url>http://www.yahoo.com</url>
+		<summary><![CDATA[]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>Autotime</title>
+		<url>http://www.google.com</url>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>Media Collateral</title>
+		<url>http://www.google.com</url>
+		<summary><![CDATA[]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>User Directory</title>
+		<url>http://www.google.com</url>
+		<summary><![CDATA[]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>Fox News</title>
+		<url>http://www.google.com</url>
+		<summary><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum metus augue, in laoreet leo lacinia at.]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	<link>
+		<title>Bing</title>
+		<url>http://www.google.com</url>
+		<summary><![CDATA[]]></summary>
+		<img>default_images/link_filler.jpg</img>
+	</link>
+	
+</items>
